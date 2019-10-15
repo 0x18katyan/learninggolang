@@ -17,20 +17,24 @@ type personStruct struct {
 	interests           interests
 }
 
-var person personStruct
-
 func main() {
-	person.firstname = takeInput("First Name")
-	person.lastname = takeInput("Last Name")
-	person.age = takeInput("Age")
-	person.interests.primaryInterest = takeInput("Primary Interest")
-	person.interests.secondaryInterest = takeInput("Secondary Interest")
-	person.interests.tertiaryInterest = takeInput("Tertiary Interest")
+	inputSlice := []personStruct{}
+
+	m := map[int][]personStruct{}
+
+	x := []string{"First Name", "Last Name", "Age", "Primary Interest", "Secondary Interest", "Tertiary Interest"}
+
+	for k, v := range x {
+		fmt.Printf("key %v, value %v of type %T\n", k, v, v)
+		//inputSlice[k] = takeInput(v)
+	}
+
 }
 
-func takeInput(input string) {
+func takeInput(input string) string {
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println(fmt.Sprint("Enter your %d:  ", input))
-	user_input, _ := reader.ReadString("\n")
-	return user_input
+	fmt.Printf(fmt.Sprintf("Enter your %v: ", input))
+	userInput, _ := reader.ReadString('\n')
+	fmt.Println(userInput)
+	return userInput
 }
