@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-type interests struct {
+type interestsStruct struct {
 	primaryInterest   string
 	secondaryInterest string
 	tertiaryInterest  string
@@ -14,7 +14,7 @@ type interests struct {
 type personStruct struct {
 	firstname, lastname string
 	age                 int
-	interests           interests
+	interests           interestsStuct
 }
 
 func main() {
