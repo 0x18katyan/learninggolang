@@ -12,5 +12,4 @@ func main() {
 	func(x int) {
 		fmt.Printf("The number is %v, and this is being printed using an Anonymous Function.\n", x)
 	}(32)
-
 }

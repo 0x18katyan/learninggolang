@@ -65,7 +65,6 @@ func main() {
 
 	student1.brag()
 	student2.brag()
-	x := 1
-	discount(x)
+	discount(student1)
 
 }
